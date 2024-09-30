@@ -1,0 +1,485 @@
+/* CSS General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+/* Variables */
+:root {
+
+  /* Colors */
+  --color-primary: black;
+  --color-secondary: white;
+  --color-cta: #020202;
+  --color-bg: white;
+  --color-bg-nav: #646464;
+  --color-headings: black;
+  --color-body-text: black;
+  --color-semitransparent: rgba (0,0,0,0.5);
+  --color-shadow: grey;
+  
+ 
+
+  /* Fonts */
+  --font-headings: "Roboto", sans-serif;
+  --font-body-text: "Roboto",sans-serif;
+ 
+  /* Spacing */
+  --spacing-sm: 10px;
+  --spacing-md: 20px;
+  --spacing-lg: 30px;
+  --spacing-x-lg: 40px
+  --spacing-xx-lg: 50px;
+}
+ 
+html {
+  /* Set root font-size for rem to 62.5% to change the font-size default value to 10px. */
+  font-size: 62.5%;
+}
+ 
+/* General styles */
+body {
+  font-family: var(--font-headings);
+  line-height: 1.6;
+ 
+  /* 1rem = 10px */
+  font-size: 1.6rem;
+}
+
+/* Typography - Mobile */
+h1 {
+  font-size: 2rem;
+  line-height: 1;
+  letter-spacing: -0.0625rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.125rem;
+  line-height: 1.067rem;
+  letter-spacing: -0.0rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.125rem;
+  line-height: 1.083rem;
+letter-spacing: -0.0376rem;
+font-weight: bold;
+}
+ 
+p, span, b, i, strong, em, a, li {
+  font-size: 1.2rem;
+}
+
+button {
+  font-size: 1.35rem;
+}
+
+
+/* Navigation bar */
+header {
+  background-color: var(--color-bg-nav);
+  padding: var(--spacing-sm);
+}
+ 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-secondary);
+}
+
+
+.logo img {
+  font-size: 1.5rem;
+  background-image: url(./images/Screenshot\ 2024-09-19\ 164242.png);
+  width: 250px;
+  height: 100px;
+  border-radius: 1000%;
+  -webkit-border-radius: 1313%;
+  -moz-border-radius: 1000%;
+  -ms-border-radius: 1000%;
+  -o-border-radius: 1000%;
+  object-fit: fill;
+  box-shadow: #020202;
+  vertical-align: -59%;
+}
+
+.menu {
+  /* Hidden on mobile devices */
+  display: none;
+  
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  padding-right: var(--spacing-md);
+  font-size: 21px;
+}
+
+.menu a:hover {
+  color: var(--color-cta);
+  font-weight: bold;
+}
+ 
+.burger-menu {
+  font-size: 2rem;
+  cursor: pointer;
+  /* Display on mobile devices */
+  display: block;
+
+}
+ 
+.mobile-menu {
+  display: none;
+  background-color: var(--color-bg-nav);
+  padding: var(--spacing-sm);
+  position: absolute;
+  top: var(--spacing-xx-lg);
+  width: 100%;
+  z-index: 1;
+}
+ 
+.mobile-menu a {
+  display: block;
+  color: var(--color-secondary);
+  padding: var(--spacing-sm);
+  text-decoration: none;
+}
+ 
+/* Hero section */
+#hero {
+  position: relative;
+  text-align: center;
+  
+
+}
+ 
+.hero-image {
+  width: 100%;
+  height: auto;
+}
+ 
+.hero-text {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+ 
+.cta-button {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-cta);
+  color: var(--color-secondary);
+  border: none;
+  cursor: pointer;
+  border-radius: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  -ms-border-radius: 9px;
+  -o-border-radius: 9px;
+  transition-duration: 0.4s;
+}
+
+
+.cta-button:hover {
+  background-color: #5c5e5d;
+  color: rgb(255, 255, 255);
+}
+
+ 
+/* Sections */
+section {
+  padding: var(--spacing-x-lg) var(--spacing-md);
+  text-align: center;
+  font-size: large;
+}
+
+ 
+.web-cards {
+  display: flex;
+  /* Stacks cards vertically on mobile */
+  flex-direction: column;
+  gap: var(--spacing-md);
+  text-align: center;
+  padding: 50px;
+  
+}
+ 
+.card {
+  background-color: var(--color-bg-nav);
+  padding: var(--spacing-md);
+  flex-basis: 1000%;
+  max-width: 30rem;
+  border-radius:2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius:2rem;
+  -ms-border-radius:2rem;
+  -o-border-radius:2rem;
+  -webkit-border-radius:2rem;
+  background-color: var(--color-semitransparent0);
+  box-shadow: 0ren 0rem 3rem var(--color-shadow);
+  margin: 2rem;
+}
+
+.card img {
+  max-width: 30rem;
+  border-radius: 2rem 2rem 0 0;
+  -webkit-border-radius: 2rem 2rem 0 0;
+  -moz-border-radius: 2rem 2rem 0 0;
+  -ms-border-radius: 2rem 2rem 0 0;
+  -o-border-radius: 2rem 2rem 0 0;
+  display: block;
+  max-width: 100%;
+}
+
+.info {
+  text-align: left;
+  padding: 1rem 2rem;
+}
+
+ 
+.small-card {
+  flex: 1;
+}
+ 
+.large-card {
+  flex: 2;
+}
+
+.first-card {
+  color: var(--color-cta);
+  background-color: var(--color-secondary);
+  border: 1px solid var(--color-primary);
+  border-radius: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  -ms-border-radius: 9px;
+  -o-border-radius: 9px;
+}
+
+.second-card {
+  border-radius: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  -ms-border-radius: 9px;
+  -o-border-radius: 9px;
+  
+}
+
+.third-card {
+  border-radius: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  -ms-border-radius: 9px;
+  -o-border-radius: 9px;
+}
+ 
+/* Footer */
+footer {
+  background-color: var(--color-bg-nav);
+  color: var(--color-secondary);
+  padding: var(--spacing-md);
+  text-align: center;
+
+}
+ 
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+ 
+.social-media img {
+  margin-right: var(--spacing-sm);
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
+
+
+/* Cookie Popup */
+.cookie-popup {
+  position: fixed;
+  bottom: 0;
+  background-color: var(--color-bg-nav);
+  color: var(--color-secondary);
+  width: 100%;
+  padding: var(--spacing-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ 
+.cookie-popup button {
+  padding: var(--spacing-sm);
+  background-color: var(--color-cta);
+  color: var(--color-secondary);
+  border: none;
+  cursor: pointer;
+}
+ 
+/* Carousel */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.carousel-slide {
+  display: flex;
+}
+
+.carousel-slide img {
+  width: 100%;
+  display: none;
+}
+
+.carousel-slide img.active {
+  display: block;
+}
+
+.carousel-navigation {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.carousel-navigation .pre, .next {
+  color: black;
+}
+
+.carousel-navigation button {
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+  outline: none;
+}
+
+.carousel-bullets .bullet {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(97, 95, 95);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+
+.carousel-bullets .bullet.active {
+  display: inline-block;
+  background-color: red;
+  justify-content: center;
+  align-items: center;
+}
+
+
+video {
+  display: block;
+  margin: auto;
+  border-radius: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  -ms-border-radius: 9px;
+  -o-border-radius: 9px;
+  
+}
+
+/* Responsive styles */
+/* Media query */
+@media (min-width: 768px) {
+
+ .menu {
+    display: block;
+    font-size: large;
+    font-weight: 400px;
+  }
+}
+ 
+  .burger-menu {
+    /* Hidden on tablet and desktop */
+    display: none;
+  }
+ 
+  .mobile-menu {
+    display: none;
+  }
+ 
+  .web-cards {
+    /* Horizontal layout on larger screens */
+    flex-direction: row;
+  }
+ 
+  .card {
+    max-width: 30%;
+  }
+
+  /* Typography - tablet and Desktop*/
+
+h1 {
+  font-size: 2.125rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.875rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+ 
+h4 {
+ font-size: 1.25rem;
+ font-weight: bold;
+}
+
+h5{
+font-size: 1.125rem;
+line-height: 1.111;
+letter-spacing: -0.0125rem;  
+font-weight: bold;
+}
+
+h6{
+  font-size: 1rem;
+  line-height: 1.125;
+  letter-spacing: -0.00625rem;
+  font-weight: bold;
+}
+
+p, span, b, i, strong, em, a, li {
+  font-size: 1.2rem;
+}
+
+button {
+  font-size: 1.35rem;
+}
+
+
